@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+  app:
+    image: 'docker-spring-boot-postgres:latest'
+    build:
+      context: .
+    container_name: mortgage-app
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/compose-postgres
+      - SPRING_DATASOURCE_USERNAME=compose-postgres
+      - SPRING_DATASOURCE_PASSWORD=compose-postgres
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    ports:
+      - "5001:8080"
+
+  db:
+    #this was the latest version available in RDS
+    #alpine specifies that we want a lightweight version of the image based on Alpine deluxe
+    image: 'postgres:15.4-alpine'
+    container_name: postgres-db
+    environment:
+      - POSTGRES_USER=compose-postgres
+      - POSTGRES_PASSWORD=compose-postgres
+    ports:
+      - "5002:5432"
