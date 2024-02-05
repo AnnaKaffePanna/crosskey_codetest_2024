@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://database-2.cbyntawj9fjc.eu-north-1.rds.amazonaws.com:5432/customer_database
+    username: postgres
+    password: compose-postgres
+server:
+  port: 80
