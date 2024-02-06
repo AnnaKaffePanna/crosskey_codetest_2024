@@ -6,12 +6,12 @@ Webinterface with AWS: [mortgage-lb-673383458.eu-north-1.elb.amazonaws.com](http
 - Java 17
 - Maven
 - PostgreSQL Database
-- (Optional) Docker
+- Docker
 
 ### Run Application locally
 Before we can run the app locally using an image we need to configure the test database 
 
-##### Pull down an existing postgres image and run it as container
+##### Run database with Docker-Compose
 ```console
 cd src/main/docker
 docker-compose up db -d
