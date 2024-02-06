@@ -24,7 +24,7 @@ public class CustomerService {
     }
 
     public void processProspectsIntoDatabase() throws IOException {
-        List<Customer> customers = prospectFileService.readFile("prospects.txt");
+        List<Customer> customers = prospectFileService.readFile();
         customerRepository.saveAll(customers);
     }
 

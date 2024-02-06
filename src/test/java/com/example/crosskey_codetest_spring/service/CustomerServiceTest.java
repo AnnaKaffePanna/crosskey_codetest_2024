@@ -44,7 +44,7 @@ class CustomerServiceTest {
     @Test
     void processProspectsIntoDatabase() throws IOException {
         // Mocking
-        when(prospectFileService.readFile("prospects.txt")).thenReturn(customers);
+        when(prospectFileService.readFile()).thenReturn(customers);
 
         // Call and verify method
         customerService.processProspectsIntoDatabase();

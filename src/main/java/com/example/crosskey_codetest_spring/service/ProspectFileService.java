@@ -18,13 +18,13 @@ public class ProspectFileService {
         this.calculatorService = calculatorService;
     }
 
-    /** Reads prospect.txt and returns a List of Customers **/
-    public List<Customer> readFile(String fileName) throws IOException {
+    /** Reads prospects.txt and returns a List of Customers **/
+    public List<Customer> readFile() throws IOException {
         List<Customer> customers = new ArrayList<>();
 
         int count = 0;
 
-        InputStream is = getClass().getClassLoader().getResourceAsStream(fileName);
+        InputStream is = getClass().getClassLoader().getResourceAsStream("prospects.txt");
         assert is != null;
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
 
