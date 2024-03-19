@@ -1,7 +1,5 @@
 ## Crosskey codetest 2024 made by Anna Östman
 
-Webinterface with AWS: [mortgage-lb-673383458.eu-north-1.elb.amazonaws.com](http://mortgage-lb-673383458.eu-north-1.elb.amazonaws.com)
-
 ## Requirements
 - Java 17
 - Maven
